@@ -58,7 +58,7 @@ The website is fully responsive and optimized for:
 ## 🌐 Live Website
 
 Visit our live website:  
-**https://yourusername.github.io**
+**https://github.com/golden-crystal-events/golden-crystal**
 
 ## 📄 License
 
