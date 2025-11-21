@@ -34,7 +34,7 @@
             padding: 0 20px;
         }
         
-        /* Header Styles - Exactly like your image */
+        /* Header Styles */
         header {
             background: rgba(26, 26, 26, 0.95);
             position: fixed;
@@ -108,6 +108,7 @@
             position: relative;
             text-transform: uppercase;
             letter-spacing: 1px;
+            cursor: pointer;
         }
         
         nav a:hover {
@@ -129,8 +130,21 @@
             width: 100%;
         }
 
-        /* Rest of your CSS remains exactly the same */
-        .hero {
+        /* Main Content Sections */
+        .page-section {
+            padding: 100px 0;
+            min-height: 80vh;
+        }
+
+        .page-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--gold);
+            text-align: center;
+        }
+
+        /* Home/Hero Section */
+        #home-page {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
@@ -146,13 +160,14 @@
             margin: 0 auto;
         }
         
-        .hero h2 {
+        .hero-content h2 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             font-weight: 300;
+            color: white;
         }
         
-        .hero p {
+        .hero-content p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             color: var(--crystal);
@@ -170,6 +185,7 @@
             border: 2px solid var(--gold);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
         
         .btn:hover {
@@ -177,8 +193,8 @@
             color: var(--gold);
         }
         
-        .services {
-            padding: 100px 0;
+        /* Services Section */
+        #services-page {
             background: var(--light);
             color: var(--dark);
         }
@@ -250,9 +266,55 @@
             color: #666;
             margin-bottom: 20px;
         }
+
+        /* Service Detail Pages */
+        .service-detail-content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            color: var(--dark);
+            margin-top: 30px;
+        }
+
+        .service-detail-content h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .service-features, .service-process {
+            margin: 30px 0;
+        }
+
+        .service-features h4, .service-process h4 {
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
         
-        .about {
-            padding: 100px 0;
+        /* About Section */
+        #about-page {
             background: var(--dark);
         }
         
@@ -267,6 +329,7 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: var(--gold);
+            text-align: left;
         }
         
         .about-text p {
@@ -285,9 +348,114 @@
             height: auto;
             display: block;
         }
+
+        /* About Detailed Page */
+        .about-story {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            color: var(--dark);
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .mission, .vision {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .mission h4, .vision h4 {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .why-choose-us {
+            margin-top: 30px;
+        }
+
+        .why-choose-us ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .why-choose-us li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .why-choose-us li:before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
         
-        .testimonials {
-            padding: 100px 0;
+        /* Portfolio Section */
+        #portfolio-page {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .portfolio-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .portfolio-content {
+            padding: 20px;
+        }
+
+        .portfolio-content h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .portfolio-cta {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Testimonials */
+        #testimonials-page {
             background: var(--light);
             color: var(--dark);
         }
@@ -349,6 +517,77 @@
             font-size: 0.9rem;
         }
         
+        /* Contact Section */
+        #contact-page {
+            background: var(--dark);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info, .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .contact-item h4 {
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #aaa;
+        }
+
+        .form-group select {
+            color: white;
+        }
+
+        .form-group select option {
+            background: #333;
+            color: white;
+        }
+        
+        /* CTA Section */
         .cta {
             padding: 100px 0;
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
@@ -368,6 +607,7 @@
             color: var(--crystal);
         }
         
+        /* Footer */
         footer {
             background: #111;
             padding: 70px 0 20px;
@@ -418,6 +658,7 @@
             color: #aaa;
             text-decoration: none;
             transition: color 0.3s;
+            cursor: pointer;
         }
         
         .footer-column ul li a:hover {
@@ -456,6 +697,7 @@
             font-size: 0.9rem;
         }
         
+        /* Responsive Design */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -466,11 +708,11 @@
                 gap: 20px;
             }
             
-            .hero h2 {
+            .hero-content h2 {
                 font-size: 2.5rem;
             }
             
-            .about-content {
+            .about-content, .contact-content, .mission-vision {
                 grid-template-columns: 1fr;
             }
             
@@ -481,6 +723,10 @@
             .logo-text h1 {
                 font-size: 1.6rem;
             }
+
+            .page-section {
+                padding: 80px 0;
+            }
         }
         
         @media (max-width: 576px) {
@@ -490,11 +736,16 @@
                 gap: 10px;
             }
             
-            .hero h2 {
+            .hero-content h2 {
                 font-size: 2rem;
+            }
+
+            .services-grid, .portfolio-grid {
+                grid-template-columns: 1fr;
             }
         }
         
+        /* Ripple effect for buttons */
         .ripple {
             position: absolute;
             border-radius: 50%;
@@ -509,13 +760,22 @@
                 opacity: 0;
             }
         }
+
+        /* Active page styling */
+        .active-page {
+            display: block !important;
+        }
+
+        .hidden-page {
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <!-- Header - Exactly like your image with final seamless logo -->
+    <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="#" class="logo" onclick="showPage('home-page')">
                 <img src="https://i.ibb.co/TqpWH3HL/Golden-Crystal-Logo.png" alt="Golden Crystal" class="logo-img">
                 <div class="logo-text">
                     <h1>GOLDEN <span>CRYSTAL</span></h1>
@@ -523,27 +783,28 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a onclick="showPage('home-page')">Home</a></li>
+                    <li><a onclick="showPage('services-page')">Services</a></li>
+                    <li><a onclick="showPage('about-page')">About</a></li>
+                    <li><a onclick="showPage('portfolio-page')">Portfolio</a></li>
+                    <li><a onclick="showPage('testimonials-page')">Testimonials</a></li>
+                    <li><a onclick="showPage('contact-page')">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- The rest of your HTML remains exactly the same -->
-    <section class="hero">
-        <div class="container hero-content">
+    <!-- Home Page -->
+    <section id="home-page" class="page-section active-page">
+        <div class="hero-content">
             <h2>Crafting Unforgettable Experiences</h2>
             <p>Golden Crystal specializes in executive gatherings, VIP events, and premium celebrations. We transform your vision into reality with meticulous planning and flawless execution.</p>
-            <a href="#" class="btn">Plan Your Event</a>
+            <a class="btn" onclick="showPage('contact-page')">Plan Your Event</a>
         </div>
     </section>
 
-    <section class="services">
+    <!-- Services Page -->
+    <section id="services-page" class="page-section hidden-page">
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
@@ -555,7 +816,7 @@
                     <div class="service-content">
                         <h3>Executive Gatherings</h3>
                         <p>From board meetings to corporate retreats, we create professional environments that facilitate productivity and networking.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <a class="btn" onclick="showPage('contact-page')">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -563,7 +824,7 @@
                     <div class="service-content">
                         <h3>VIP Events</h3>
                         <p>Exclusive, high-profile events with premium amenities, security, and personalized service for distinguished guests.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <a class="btn" onclick="showPage('contact-page')">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -571,29 +832,90 @@
                     <div class="service-content">
                         <h3>Special Celebrations</h3>
                         <p>Weddings, anniversaries, galas, and milestone celebrations designed to create lasting memories.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <a class="btn" onclick="showPage('contact-page')">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about">
-        <div class="container about-content">
-            <div class="about-text">
-                <h2>About Golden Crystal</h2>
-                <p><strong>Grow with us!</strong> Golden Crystal is establishing itself as the premier choice for discerning clients seeking exceptional events.</p>
-                <p>Our team of dedicated professionals combines creativity with meticulous attention to detail, ensuring every event we plan exceeds expectations.</p>
-                <p>We believe that every event tells a story, and we're committed to making yours unforgettable.</p>
-                <a href="#" class="btn">Our Story</a>
-            </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1551135049-8a33b42738b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Golden Crystal Team">
+    <!-- About Page -->
+    <section id="about-page" class="page-section hidden-page">
+        <div class="container">
+            <div class="about-story">
+                <h2>Our Story</h2>
+                <h3>Grow With Us on This Exciting Journey</h3>
+                <p>Golden Crystal was born from a passion for creating extraordinary moments and a vision to redefine event planning in Malawi. While we may be new to the scene, our commitment to excellence is timeless.</p>
+                
+                <div class="mission-vision">
+                    <div class="mission">
+                        <h4>Our Mission</h4>
+                        <p>To transform visions into unforgettable experiences through meticulous planning, creative solutions, and unwavering attention to detail.</p>
+                    </div>
+                    
+                    <div class="vision">
+                        <h4>Our Vision</h4>
+                        <p>To become Malawi's most trusted name in premium event planning, known for innovation, reliability, and exceptional service.</p>
+                    </div>
+                </div>
+                
+                <div class="why-choose-us">
+                    <h4>Why Choose Golden Crystal?</h4>
+                    <ul>
+                        <li>Fresh perspectives and innovative ideas</li>
+                        <li>Personalized approach to every event</li>
+                        <li>Growing network of premium vendors</li>
+                        <li>Commitment to exceeding expectations</li>
+                        <li>Passionate about making your vision reality</li>
+                    </ul>
+                </div>
+
+                <a class="btn" onclick="showPage('contact-page')" style="margin-top: 30px;">Start Your Journey With Us</a>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
+    <!-- Portfolio Page -->
+    <section id="portfolio-page" class="page-section hidden-page">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <p class="portfolio-intro">While we're building our portfolio with exciting new projects, here's a glimpse of the types of events we specialize in:</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                    <div class="portfolio-content">
+                        <h3>Corporate Galas</h3>
+                        <p>Elegant settings for corporate celebrations and award ceremonies</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                    <div class="portfolio-content">
+                        <h3>Executive Retreats</h3>
+                        <p>Productive environments for strategic meetings and team building</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                    <div class="portfolio-content">
+                        <h3>Special Celebrations</h3>
+                        <p>Memorable weddings, anniversaries, and milestone events</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-cta">
+                <p>Be the first to feature in our growing portfolio! Contact us to start planning your event.</p>
+                <a class="btn" onclick="showPage('contact-page')">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Page -->
+    <section id="testimonials-page" class="page-section hidden-page">
         <div class="container">
             <div class="section-title">
                 <h2>Client Testimonials</h2>
@@ -640,14 +962,93 @@
         </div>
     </section>
 
+    <!-- Contact Page -->
+    <section id="contact-page" class="page-section hidden-page">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to create an unforgettable event? We'd love to hear from you!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>N2/716 Domwe Street<br>Ndirande Newlines, Blantyre</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+265 997 26 80 18</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@goldencrystal.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Service</option>
+                                <option value="executive">Executive Gatherings</option>
+                                <option value="vip">VIP Events</option>
+                                <option value="corporate">Corporate Events</option>
+                                <option value="wedding">Weddings</option>
+                                <option value="celebration">Special Celebrations</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your event..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <h2>Ready to Create an Unforgettable Event?</h2>
             <p>Contact us today for a consultation and let us bring your vision to life with the expertise and elegance that defines Golden Crystal.</p>
-            <a href="#" class="btn">Get In Touch</a>
+            <a class="btn" onclick="showPage('contact-page')">Get In Touch</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -664,21 +1065,21 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a onclick="showPage('home-page')"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a onclick="showPage('services-page')"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a onclick="showPage('about-page')"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a onclick="showPage('portfolio-page')"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a onclick="showPage('contact-page')"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Executive Gatherings</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> VIP Events</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Corporate Events</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Weddings</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Special Celebrations</a></li>
+                        <li><a onclick="showPage('services-page')"><i class="fas fa-chevron-right"></i> Executive Gatherings</a></li>
+                        <li><a onclick="showPage('services-page')"><i class="fas fa-chevron-right"></i> VIP Events</a></li>
+                        <li><a onclick="showPage('services-page')"><i class="fas fa-chevron-right"></i> Corporate Events</a></li>
+                        <li><a onclick="showPage('services-page')"><i class="fas fa-chevron-right"></i> Weddings</a></li>
+                        <li><a onclick="showPage('services-page')"><i class="fas fa-chevron-right"></i> Special Celebrations</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -697,6 +1098,26 @@
     </footer>
 
     <script>
+        // Page navigation functionality
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => {
+                page.classList.remove('active-page');
+                page.classList.add('hidden-page');
+            });
+            
+            // Show the selected page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden-page');
+                targetPage.classList.add('active-page');
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
@@ -734,6 +1155,18 @@
                     ripple.remove();
                 }, 600);
             });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('home-page');
         });
     </script>
 </body>
